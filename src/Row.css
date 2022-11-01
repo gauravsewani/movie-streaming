@@ -1,0 +1,71 @@
+.row {
+  color: white;
+  margin-left: 20px;
+  overflow: hidden;
+}
+
+.row__posters {
+  display: flex;
+  width: 100%;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  padding: 20px;
+}
+
+.row__posters::-webkit-scrollbar {
+  display: none;
+}
+
+.container {
+  object-fit: contain;
+  display: flex;
+}
+
+.row__poster {
+  margin-right: 10px;
+  width: 225px;
+  height: 120px;
+  position: relative;
+  display: block;
+  flex: 1 1 0px;
+  transition: transform 450ms;
+}
+.container:focus-within .row__poster,
+.container:hover .row__poster {
+  transform: translateX(-25%);
+}
+.row__poster:focus ~ .row__poster,
+.row__poster:hover ~ .row__poster {
+  transform: translateX(25%);
+}
+
+.container .row__poster:focus,
+.container .row__poster:hover {
+  transform: scale(1.5);
+  z-index: 1;
+}
+
+.row__poster img {
+  display: block;
+  max-width: 100%;
+}
+
+.row__poster:hover {
+  transform: scale(1.08);
+  opacity: 1;
+}
+
+.row__posterLarge {
+  height: auto;
+}
+
+.row__posterLarge:hover {
+  transform: scale(1.09);
+  opacity: 1;
+}
+
+.container .row__poster.row__posterLarge:focus,
+.container .row__poster.row__posterLarge:hover {
+  transform: scale(1.09);
+  z-index: 1;
+}
