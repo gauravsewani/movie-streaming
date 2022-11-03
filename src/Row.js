@@ -20,8 +20,8 @@ const Row = ({ title, fetchUrl, isLargeRow = false }) => {
 
   return (
     <div className="row">
-      <h2>{title}</h2>
-      <img src={movies.poster_path} alt="" />
+      <h2 className="title">{title}</h2>
+      {/* <img src={movies.poster_path} alt="" /> */}
 
       <div className="row__posters">
         {movies.map(

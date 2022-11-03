@@ -5,13 +5,13 @@ import { auth } from "../firebase";
 import Nav from "../Nav";
 import "./ProfileScreen.css";
 
-function ProfileScreen() {
+function ProfileScreen({ profile }) {
   const user = useSelector(selectUser);
   const temp = user.counter.user;
 
   return (
     <div className="profileScreen">
-      <Nav />
+      <Nav profile />
       <div className="profileScreen__body">
         <h1>Edit Profile</h1>
         <div className="profileScreen__info">
